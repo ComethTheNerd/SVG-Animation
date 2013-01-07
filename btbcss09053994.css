@@ -1,0 +1,114 @@
+/* THIS FILE IS THE PROPERTY OF DARIUS HODAEI */
+
+/* Text */
+text.scene1text{font-family:Verdana;font-size:20px; font-weight:bold; fill:black;}
+text.scene2text{font-family:Verdana;font-size:17px; font-weight:bold; fill:black;}
+text.scene4text{font-family:Verdana;font-size:24px; font-weight:bold; fill:black;}
+text.scene5text{font-family:Arial;font-size:42px; font-weight:bold; fill:white;}
+
+/* Bob model */
+#hatClip{stroke:rgb(99,99,99);stroke-width:2;}
+
+#bobhead{stroke:black; stroke-width:2; fill:blanchedalmond;}
+#bobeyes{ stroke:black; stroke-width:2; fill:black;}
+#bobmouth{fill:none; stroke:black; stroke-width:2;}
+#bobhat{stroke:black; stroke-width:2; fill:yellow; }
+#bobhatpeak{fill:rgb(255,200,0);}
+#bobtorso{fill:Orange;stroke:black;}
+#boboveralls{fill:blue;stroke:black;}
+#bobbelt{fill:brown;stroke:black;}
+#limb{fill:blue; stroke:black; stroke-width:2;}
+#bobhand{stroke:black; stroke-width:2; fill:blanchedalmond;}
+
+/* Lofty model */
+#loftycranearm{fill:rgb(25,67,141);stroke:black;stroke-width:2;}
+#loftycranejoin{fill:rgb(25,67,141);stroke:black;}
+#loftycranewire{stroke:black; stroke-width:4;}
+#loftyhook{fill:rgb(25,67,141); stroke:black;}
+#loftyobscuredtire{fill:black; stroke:black;}
+#loftybody{fill:rgb(25,67,141); stroke:black;stroke-width:2;}
+#loftybody2{fill:rgb(25,67,141); stroke:black;}
+#loftycabin{fill:rgb(25,67,141); stroke:white;stroke-width:2;}
+#eye{fill:rgb(25,67,141); stroke:black;}
+#loftyeyeball{fill:white;stroke:black;}
+#loftypupil{fill:black;stroke:black;}
+#loftytires{fill:black;stroke:black;}
+#loftyhubcaps{fill:rgb(25,67,141); stroke:white;}
+#loftymouth{fill:rgb(108,164,215);}
+#loftylips{stroke:black;stroke-width:3;}
+				
+/* Bob's yard */
+#stump{fill:brown;}
+#bushell{fill:green;}
+
+#garage_roof{ stroke:black; fill:rgb(181,36,77);}
+#garage_door{fill:rgb(107,102,166);}
+#sidewall{fill:rgb(217,175,115);}
+#frontwall{ fill:rgb(217,175,115); stroke:black; }
+
+#housefront{fill:rgb(217,175,115);}
+#housegutter{fill:rgb(142,160,206);}
+#houseroof{ stroke:black; fill:rgb(181,36,77);}
+
+#chimneytop{fill:rgb(217,175,115);}
+#chimneybreast{fill:rgb(217,175,115);}
+#smoke1{fill:rgb(78,78,78);}
+#smoke2{fill:rgb(91,91,91);}
+#smoke3{fill:rgb(120,120,120);}
+
+#window1{fill:lightblue;}
+#window2{fill:yellow;}
+#window3{fill:yellow;}
+
+#frontdoor{fill:OliveDrab;}
+
+#fencegaragehouse{fill:brown;}
+#fenceright{fill:brown;}
+
+#yardcrane{fill:green; stroke:black;}
+#yardcranegirder{fill:rgb(240,60,78); stroke:black;}
+#girders{fill:rgb(240,60,78); stroke:black;}
+
+#yarddirt{fill:rgb(120,89,58); stroke:black;}
+#yardscoop{fill:yellow; stroke:black;}
+#yardhole{fill:black;}
+
+/* Office*/
+#officewall{stroke:black; fill:yellow;}
+
+#clockface{fill:white;}
+#clockrim{fill:red; stroke:black;}
+#clockcentre{fill:gold;}
+#minutehand{stroke:black; stroke-width:4;}
+#hourhand{stroke:black; stroke-width:4;}
+#secondhand{stroke:red; stroke-width:2;}
+
+#desk{stroke:black; fill:brown;}
+
+#computer{fill:white; stroke:black;}
+#computerscreen{fill:blue;}
+
+/* Work hut */
+#hutsky{fill:red}
+#sunmoon{fill:yellow}
+#sunmoondefs{fill:yellow}
+#hutfloor{fill:maroon}
+
+#hutroof{fill:black}
+#hutfront{fill:black}
+#hutdoorhole{fill:white}
+
+#noise{stroke:white; stroke-width:4;}
+
+#signdefs{fill:white; stroke:black;}
+#signtext{fill:black}
+
+#handdefs{fill:pink}
+
+#nightfilter{fill:black}
+
+/* Slide */
+#slidedefs{stroke:black; stroke-width:4;}
+#slidecurve{stroke:black; fill:red}
+/* Final Scene */
+#backdrop{fill:black}

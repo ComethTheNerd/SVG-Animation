@@ -1,0 +1,1173 @@
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type="text/css" href="btbcss09053994.css" ?> 
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="500" viewBox="0 0 750 500" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<rect class="background" x="0" y="0" width="750" height="500"  />
+
+/*  THIS FILE IS THE PROPERTY OF DARIUS HODAEI */
+
+/************************ GENERAL DEFINITIONS ************************/
+
+/* gradient definitions */
+<defs> 
+	/* day time sky fill */
+	<linearGradient id="day_sky_color" x1="0%" y1="0%" x2="100%" y2="0%">
+		<stop offset="0%" style="stop-color:rgb(146,254,251);
+			stop-opacity:1"/>
+		<stop offset="100%" style="stop-color:rgb(5,151,228);
+			stop-opacity:1"/>
+	</linearGradient>
+	
+	/* sun fill */
+	<radialGradient id="sun_color1" cx="50%" cy="50%" r="50%"
+		fx="20%" fy="20%">
+		<stop offset="0%" style="stop-color:rgb(255,0,0);
+			stop-opacity:1"/>
+		<stop offset="100%" style="stop-color:rgb(255,255,0);
+			stop-opacity:1"/>
+	</radialGradient>
+	
+	/* floor */
+	<linearGradient id="yard_color" x1="0%" y1="0%" x2="100%" y2="0%">
+		<stop offset="0%" style="stop-color:rgb(255,219,94);
+			stop-opacity:1"/>
+		<stop offset="100%" style="stop-color:rgb(155,80,4);
+			stop-opacity:1"/>
+	</linearGradient>
+	
+</defs>
+<defs>
+	<g id="treedefs">
+		/*tree*/
+		<g id="tree">
+			<rect id="stump" x="83" y="200" width="14" height="35"/>
+			<path id="bushell" d="M 100 0 C 160 90 140 160 100 200
+									L 90 210 L 80 200 C 60 160 40 90 100 0"/>
+
+		</g>
+
+		<animateTransform
+            attributeType="XML"
+			xlink:href="#bushell"
+            attributeName="transform"
+            type="skewY"
+            from="0" to="10"
+            begin="0s" dur="3s"
+			additive="sum"
+			fill="freeze"
+			repeatCount="indefinite"/>
+
+	</g>
+</defs>
+		
+		/* the side garage */
+<defs>
+	<g id="garage">
+		/* roof of left side garage */
+		<path id="garage_roof" d="M 0 200 L 0 170 L 80 130 L 140 160 L 120 160
+									L 80 140 L 20 200 L 0 200"/>
+		/* front wall */
+		<path id="frontwall" d="M 120 160 L 120 350 L 20 390
+									L 20 200 L 80 140 L 120 160"/>
+		/* side wall */
+		<path id="sidewall" d="M 20 390 L 0 380 L 0 200 L 20 200 L 20 390"/>
+		
+		/* garage door */
+		<path id="garage_door" d="M 40 380 L 40 210 L 110 188 L 110 352 L 40 380"/>
+	</g>
+</defs>	
+<defs>
+
+	<defs> /* window shape */
+		<g id="window">
+			<rect x="0" y="0" width="70" height="70"/>
+		</g>
+	</defs>	
+
+	/* Bobs house */
+	<g id="house">
+		/* front*/
+		<rect id="housefront" x="250" y="130" width="300" height="190"/>
+		/* roof */
+		<path id="houseroof" d="M 250 130 L 230 130 L 250 70 L 550 70 L 565 130 L 550 130"/>
+		/* gutter */
+		<rect id="housegutter" x="240" y="130" width="315" height="10"/>
+	</g>
+
+<defs>
+	<g id="bobshouse">
+		<g id="mainhouse">
+			<use x="0" y="0" xlink:href="#house"/>
+			<g id="chimney">
+				/* smoke coming from chimney*/
+				<ellipse id="smoke1" cx="520" cy="40" rx="25" ry="25" opacity="1">
+					
+					/* part of the staggered bellowing smoke animation */
+					<animate attributeName="opacity" attributeType="XML" begin="1s"
+						dur="3s" from="1" to="0" repeatCount="indefinite"/>	
+				</ellipse>
+					
+				<ellipse id="smoke2" cx="560" cy="20" rx="20" ry="20" opacity="1">
+					/* part of the staggered bellowing smoke animation */
+					<animate attributeName="opacity" attributeType="XML" begin="2s"
+						dur="3s" from="1" to="0" repeatCount="indefinite"/>	
+				</ellipse>
+					
+				<ellipse id="smoke3" cx="590" cy="15" rx="10" ry="10" opacity="1">
+					/* part of the staggered bellowing smoke animation */
+					<animate attributeName="opacity" attributeType="XML" begin="3s"
+						dur="3s" from="1" to="0" repeatCount="indefinite"/>	
+				</ellipse>
+		
+				/* chimney */
+				<rect id="chimneybreast" x="500" y="50" width="40" height="50"/>
+				<rect id="chimneytop" x="490" y="45" width="60" height="10"/>
+			
+			</g>
+			
+			/* windows */
+			<use id="window1" x="270" y="160" xlink:href = "#window"/>
+			<use id="window2" x="460" y="160" xlink:href = "#window"/>
+			
+			/* front door */
+			<rect id="frontdoor" x="360" y="190" width="80" height="130"/>
+		</g>
+	
+		<g id="sidehouse">
+			<use x="850" y="213"  transform="scale(0.5,0.6);" xlink:href="#house"/>
+			<use id="window3" x="590" y="230" xlink:href ="#window"/>
+		</g>
+	</g>
+</defs>
+	
+<defs>
+	<g id="wing">
+		<path d="M 50 50 L 20 30 L 10 40 L 10 30 L 30 30 L 50 50">
+			
+			/* flying animation */
+			<animateTransform
+				attributeType="XML"
+				attributeName="transform"
+				type="rotate"
+				from="0 50,50" to="-20 50,50"
+				begin="1s" dur="1s"
+				repeatCount="indefinite"/>	
+			
+		</path>
+	</g>
+</defs>
+
+<defs>
+	<g id="bird">
+		<use x="0" y="0" xlink:href="#wing"/>
+		<use id="rightwing" x="-20" y="0" xlink:href="#wing" transform="scale(-1,1);"/>
+	</g>
+</defs>
+	
+</defs>
+
+
+<defs>
+	<g id="workhut">
+		/* hut roof */
+		<polygon id="hutroof" points="250 190 240 200 230 190 350 100
+										470 190 460 200 350 120 240 200"/>
+		/* front */
+		<polygon id="hutfront" points="270 180 270 400 430 400 430 180 350 120"/>
+	
+		/* door hole */
+		<path id="hutdoorhole" d="M 300 400 C 310 220 300 220 350 200
+									C 400 220 390 220 400 400
+									L 300 400"/>
+	</g>
+</defs>
+<defs>
+	<g id="noise">
+		/* noise lines during build off scene */
+		<line x1="150" y1="100" x2="250" y2="150" />
+		<line x1="150" y1="160" x2="250" y2="180" />
+		<line x1="150" y1="220" x2="250" y2="210" />
+		<line x1="150" y1="270" x2="250" y2="240" />
+
+		<line  x1="550" y2="150" x2="450" y1="100" />
+		<line  x1="550" y2="180" x2="450" y1="160"/>
+		<line x1="550" y2="210" x2="450" y1="220"/>
+		<line  x1="550" y2="240" x2="450" y1="270"/>
+	</g>
+</defs>
+
+<defs>
+	<g id="scene1bgdefs">
+		/* sky */
+		<rect id="sky" x="0" y="0" width="800" height="320" style="fill:url(#day_sky_color)"/>
+
+		/* floor */
+		<rect id= "floor" x="0" y="320" width="800" height="180" style="fill:url(#yard_color)"/>
+
+		/*sun*/
+		<ellipse id="sun" cx="50" cy="50" rx="40" ry="40" style="fill:url(#sun_color1)"/>
+		
+		/* tree */
+		<use x="60" y="50" xlink:href="#treedefs"/>
+		<use x="180" y="50" xlink:href="#treedefs"/>
+		<use x="470" y="50" xlink:href="#treedefs"/>
+		<use x="600" y="60" xlink:href="#treedefs"/>
+		
+		/* fence between garage and house */
+		<path id="fencegaragehouse" d="M 120 340 L 200 320 L 200 210 L 200 210 L 120 220 L 120 340"/>
+		/* fence on right side */
+		<path id="fenceright" d="M 650 210 L 700 210 L 800 220 L 800 340 L 700 320 L 650 320 L 650 210"/>
+
+		/* draw the garage */
+		<use x="0" y="0" xlink:href = "#garage"/>		
+		/* draw the house */
+		<use x="-50" y="20" xlink:href = "#bobshouse"/>
+
+		/* crane in the building yard */
+		<g id="yardcrane">
+			<rect x="660" y="400" width="50" height="10"/>
+			<rect x="680" y="250" width="15" height="150"/>
+			
+			<g id="yardcranearm">
+				<path d="M 695 250 L 560 170 L 535 170 L 680 260"/>
+				<line x1="545" y1="170" x2="535" y2="300"/>
+				<rect id="yardcranegirder" x="475" y="300" width="120" height="20"/>
+			</g>
+			
+			<g id="girders">
+				<rect x="475" y="400" width="120" height="20"/>
+				<rect x="495" y="380" width="120" height="20"/>
+				<rect x="485" y="360" width="120" height="20"/>	
+			</g>		
+	
+			<animateTransform
+				attributeType="XML"
+				xlink:href="#yardcranearm"
+				attributeName="transform"
+				type="rotate"
+				from="0 690,260" to="-30 690,260"
+				begin="1s" dur="5s"
+				additive="sum"
+				repeatCount="indefinite"/>
+
+		</g>
+
+		/* draw lofty in */
+		<use id="lofty" x="50" y="430" transform="scale(0.5,0.5);" xlink:href="#loftydefs"/>
+
+
+		<defs> /* pile of dirt in the building yard */
+			<path id="yarddirt" d="M 115 490 L 115 480 L 110 477 L 105 470 L 102 430 L 87 420 L 60 390 L 57 370 L 50 360
+									L 46 372 L 40 386 L 34 394 L 27 420 L 20 442 L 15 463 L 10 490 " />
+		</defs>
+
+		<ellipse id="yardhole" cx="170" cy="490" rx="55" ry="15"/>
+
+		<use x="30" y="-20" xlink:href="#yarddirt"/>
+
+		/* scooper in the building yard */
+		<g id="yardscoop">
+			<rect x="-20" y="450" width="70" height="10"/>
+			<rect x="-20" y="410" width="70" height="10"/>
+
+			<use x="285" y="720" xlink:href="#yarddirt" transform="scale(0.4,0.4)"/>
+
+			<path d="M 50 370 L 60 370 C 60 410 70 470 160 480
+						L 160 490 L 50 490 L 50 370"/>			
+		</g>
+
+		<animateTransform
+            attributeType="XML"
+			xlink:href="#yardscoop"
+            attributeName="transform"
+            type="rotate"
+            from="0 0,430" to="-30 0,430"
+            begin="1s" dur="5s"
+			additive="sum"
+            repeatCount="indefinite"/>	
+	</g>
+</defs>
+
+<defs>
+	<g id="scene2bgdefs">
+		<defs>
+		
+			/* view out of the office window*/
+			<clipPath id="officeWindowClipPath">
+				<rect x="75" y="50" width="250" height="190"/>
+			</clipPath>
+		
+			/* office clock */
+			<g id="clockdefs">
+				
+				/* clock face */
+				<ellipse id="clockrim" cx="100" cy="100" rx="100" ry="100"/>
+				<ellipse id="clockface" cx="100" cy="100" rx="90" ry="90"/>
+				<ellipse id="clockcentre" cx="100" cy="100" rx="10" ry="10"/>
+
+				/* clock numbers */
+				<text class="clocknumber" x="90" y="30" > XII </text>
+				<text class="clocknumber" x="140" y="43" > I </text>
+				<text class="clocknumber" x="158" y="70" > II </text>
+				<text class="clocknumber" x="170" y="100" > III </text>
+				<text class="clocknumber" x="158" y="140" > IV </text>
+				<text class="clocknumber" x="140" y="170" > V </text>
+				<text class="clocknumber" x="90" y="180" > VI </text>
+				<text class="clocknumber" x="40" y="170" > VII </text>
+				<text class="clocknumber" x="22" y="140" > VIII </text>
+				<text class="clocknumber" x="18" y="100" > IX </text>
+				<text class="clocknumber" x="22" y="70" > X </text>
+				<text class="clocknumber" x="40" y="43" > XI </text>
+
+				/* minutes hand */
+				<line id="minutehand" x1="100" y1="100" x2="130" y2="25"/>
+				
+				/* hour hand */
+				<line id="hourhand" x1="100" y1="100" x2="80" y2="45"/>
+
+				/* second hand */
+				<line id="secondhand" x1="100" y1="100" x2="100" y2="20">
+					/* ticking animation */
+					<animateTransform
+						attributeType="XML"
+						attributeName="transform"
+						type="rotate"
+						from="0,100,100" to="360,100,100"
+						begin="0s" dur="60s"
+						repeatCount="indefinite"/>
+				</line>
+
+			</g>
+		</defs>
+		
+		/* office wall */
+		<rect id="officewall" x="0" y="0" width="800" height="500"/>
+
+		/* put the clock in */
+		<use x="490" y="20" xlink:href="#clockdefs"/>
+
+		/* desk */
+		<g id="desk">
+			<rect x="150" y="400" width="450" height="30"/>
+			<rect x="200" y="430" width="50" height="75"/>
+			<rect x="475" y="430" width="50" height="75"/>
+		</g>
+
+		/*window */
+		<g id="officewindow">
+			<use x="0" y="0" xlink:href="#scene1bgdefs" clip-path="url(#officeWindowClipPath)"/>
+		</g>
+
+		/* computer */
+		<g id="computer">
+			<rect x="360" y="240" width="150" height="110"/>
+			<rect x="430" y="350" width="20" height="40"/>
+			<rect x="410" y="390" width="60" height="10"/>
+			<rect id="computerscreen" x="370" y="250" width="130" height="90"/>
+		</g>
+	</g>
+</defs>
+
+<defs>
+	<g id="scene3bgdefs">
+		/* sky */
+		<rect id="hutsky" x="0" y="0" width="800" height="320"/>
+
+		/* sun moon graphic*/
+		<ellipse id="sunmoon" cx="-70" cy="550" rx="50" ry="50"/>
+
+		/* floor */
+		<rect id= "hutfloor" x="0" y="320" width="800" height="180"/>
+	</g>
+</defs>
+
+<defs>
+	<g id="scene4bgdefs"> /* uses same bg as scene 1 but adding this to avoid confusion!*/
+		<use x="0" y="0" xlink:href="#scene1bgdefs"/>
+	</g>
+</defs>
+
+<defs>
+	<g id="scene5bgdefs">
+		/* back ground*/
+		<rect id="backdrop" x="0" y="0" width="800" height="500"/>
+	</g>
+</defs>
+
+/*sign*/
+<defs>
+	<g id="signdefs">
+		/* post */
+		<rect id="post" x="70" y="20" width="20" height="100" fill="white" stroke="black"/>
+	
+		<g id="signface">
+			<rect x="0" y="0" width="160" height="40"/>
+			<text id="signtext" x="20" y="25"> MEN AT WORK</text>
+		</g>
+	</g>
+</defs>
+
+
+<defs>
+	/*sun, moon */
+	<ellipse id="sunmoondefs" cx="50" cy="50" rx="50" ry="50"/>
+</defs>
+
+<defs>
+	/* the STOP! hand shape */
+	<g id="handdefs">
+		<path d="M 210 300 C 250 400 450 400 490 300 L 500 220 C 500 180 490 160 480 140
+					L 450 146 C 445 200 450 251 440 248 L 430 250
+					C 420 210 440 130 420 80 L 390 80
+					C 369 130 368 210 370 250
+					L 360 260 L 350 250
+					C 340 170 340 100 320 90
+					L 290 88
+					C 280 160 277 250 290 290
+					L 280 300
+					C 265 295 247 250 245 200
+					L 210 196
+					C 200 240 200 280 210 300"
+
+		transform="translate(-210,-300)"/> /* so it can be used easier */
+	
+	</g>
+</defs>
+
+<defs>
+	<g id="slidedefs" transform="translate(-470 -150) scale(1.5)" >
+		/* posts */
+		<line x1="500" y1="350" x2="470" y2="150"/>
+		<line x1="450" y1="350" x2="420" y2="150"/>
+
+		/* rungs */
+		<line x1="448" y1="325" x2="498" y2="320"/>
+		<line x1="441" y1="294" x2="490" y2="289"/>
+		<line x1="438" y1="263" x2="488" y2="258"/>
+		<line x1="435" y1="230" x2="480" y2="225"/>
+		<line x1="460" y1="190" x2="475" y2="188"/>
+
+		/* slide part */
+		<path id="slidecurve" d="M 470 150 C 470 190 460 240 400 260
+									C 350 270 300 300 300 350
+									L 230 340
+									C 260 270 230 290 330 230
+									C 380 200 390 220 410 150"/> 
+	</g>
+</defs>
+
+
+
+/************************ CHARACTER DEFINITIONS ************************/
+
+<defs>
+	<g id="bobdefs">
+		<g id="bobheaddefs">
+			<clipPath id="hatClip">
+				<rect x="40" y="0" width="130" height="50"/>
+			</clipPath>
+	
+
+	
+			/*head*/	
+			<ellipse id="bobhead" cx="100" cy="50" rx="48" ry="45"/>
+	
+			/* ears*/ 
+			<clipPath id="leftEarClip">
+				<rect x="39" y="49" width="16" height="18"/>
+			</clipPath>
+		
+			<clipPath id="rightEarClip">
+				<rect x="145" y="49" width="16" height="18"/>
+			</clipPath>
+	
+			<ellipse cx="50" cy="58" rx="10" ry="9" 
+				fill="blanchedalmond" stroke="black" style="clip-path:url(#leftEarClip)"/>
+			<ellipse cx="150" cy="58" rx="10" ry="9" 
+				fill="blanchedalmond" stroke="black" style="clip-path:url(#rightEarClip)"/>
+	
+			/*eyes*/
+			<g id="bobeyes">
+				<ellipse cx="80" cy="60" rx="2" ry="4"/>
+				<ellipse cx="120" cy="60"  rx="2" ry="4"/>
+			</g>
+			
+			/*hat*/
+			<g id="bobhat">
+				/* clipped ellipse for the hard hat */
+				<ellipse id="bobhat" cx="100" cy="50" rx="48" ry="45" style="clip-path:url(#hatClip)"/>
+	
+				/* hat detail */
+				<rect x="90" y="20" width="20" height="30"
+					style="clip-path:url(#hatClip)"/>
+	
+				/*hat peak*/
+				<ellipse id="bobhatpeak" cx="100" cy="50" rx="48" ry="10"
+					style="clip-path:url(#hatClip)"/>	
+			</g>
+			
+			/*mouth*/
+			<path id="bobmouth" d="M85 75 C 85 75 100 100 115 75" />
+		</g>
+			/*torso*/
+		<defs>
+			<g id="torso">
+				<rect id="bobtorso" x="50" y="100" width="100" height="90"/>
+		
+				/* overalls */
+				<path id="boboveralls" d="M50 120 L 60 100 L 80 120 L 80 150 L 120 150 L 120 120 L 140 100 L 150 120
+					L 150 165 L 130 190 L 70 190 L 50 165 L 50 120"/>
+		
+				/* utility belt */
+				<rect id="bobbelt" x="50" y="180" width="100" height="20"/>
+			</g>
+		</defs>
+	
+		/* limb */
+		<defs>
+			<g id="limb">
+				<path d="M50 120 C 60 110 70 110 80 120  L 80 200
+							C 70 210 60 210 50 200 L 50 120"
+					transform="translate(0,-100)"/>
+			</g>
+		</defs>
+	
+	
+		/* arm */
+		/* left arm */
+		<defs>
+			<g id="arm">
+				<use id="upperarm" x = "0" y = "0" transform="rotate(30 65,20)" xlink:href = "#limb"/>
+					<g id="forearm" >
+						<use x = "-20" y = "60"  transform="rotate(-40 45,110)" xlink:href = "#limb"/>
+						<ellipse id="bobhand" cx="70" cy="140" rx="18" ry="21"  transform="rotate(-40 70,140)"/>
+					</g>
+			</g>
+		
+			<use id="rightarmdefs" x="0" y="0" xlink:href="#arm" transform="scale(-1,1)"/>
+		
+			<g id="leg">
+				<use transform="scale(1.2,0.8);" x = "0" y = "0" xlink:href = "#limb"/>
+				<use id="lowerleg" transform="scale(1.2,0.8);" x = "0" y = "60"  xlink:href = "#limb"/>		
+			</g>
+		</defs>
+	
+		/* arrange all the parts in to the whole Bob model */
+		<g id="bobmodel">
+			<use x = "-10" y = "185" xlink:href = "#leg"/>	
+			<use x = "50" y = "185" xlink:href = "#leg"/>
+			<use x="0" y = "0" xlink:href = "#torso"/>	
+			<use id="rightarm" x="215" y="95" xlink:href="#rightarmdefs"/>
+			<use id="leftarm" x="-20" y = "95" xlink:href = "#arm"/>
+		</g>
+	</g>
+
+</defs>
+
+/* Lofty */
+<defs>
+	<g id= "loftydefs">
+	
+		/*crane*/
+		/*arm*/
+		<polyline id="loftycranearm" points="100,200 160,175 275,100 375,50 525,10 525,30 380,68 275,118
+												160,193 100,218 100,200"/>
+
+		/* hook at end of arm*/
+		<g id="cranehook">
+			/* join to the crane*/
+			<rect id="loftycranejoin" x="510" y="5" rx="5" ry="5"  width="20" height="35"/>
+	
+			/* wire*/
+			<line id="loftycranewire" x1="520" y1="40" x2="530" y2="100"/>
+
+	
+			/* hook*/
+			<g id="hook">
+				<path id="loftyhook" d="M 520 102 L 540 99 L 545 120 
+											C 560 125 560 160 530 170
+											C 510 170 500 150 500 130
+											L 510 127 
+											C 510 150 520 160 530 162
+											C 555 148 550 120 535 130
+											L 520 102"/>
+
+			</g>
+		</g>
+
+		/*slightly obscured tire*/
+		<ellipse id="loftyobscuredtire" cx="385" cy="300" rx="40" ry="55"/>
+
+		/*body*/
+		<polyline id="loftybody" points="53,250 160,300 320,320 430,300 460,250 420,160
+											429,153 429,147 310,145 260,155 260,250 165,253 53,250"/>
+
+		<rect id="loftybody2" x="75" y="200" width="90" height="60"/>
+
+		/* cabin detail*/
+		/*cabin left side*/
+		<g id="loftycabin">
+			<polyline points="275,260 275,170 320,175 310,155 320,152 362,250 275,260"/>
+
+			<line x1="320" y1="174" x2="353" y2="252"/>
+
+			/*cabin front*/
+			<polyline points="330,155 372,248 445,245 405,159 330,155"/>
+		</g>
+
+		/*eyes*/
+		<defs>
+			<g id="eye">
+				<ellipse cx="360" cy="215" rx="20" ry="25"/>
+				<ellipse id="loftyeyeball" cx="360" cy="215" rx="12" ry="18"/>
+				
+				/* pupil */
+				<ellipse id="loftypupil" cx="360" cy="223" rx="3" ry="5">
+					/* Lofty looks at Bob when he first comes out of the house */
+					<animate attributeType="XML" attributeName="cx" from="360" to="365" begin="2s" dur="10s"/>
+					<animate attributeType="XML" attributeName="cy" from="223" to="217" begin="2s" dur="10s"/>
+				</ellipse>
+			</g>
+		</defs>
+
+		/* left eye */
+		<use x = "0" y = "0" xlink:href = "#eye"/>
+		/* right eye */
+		<use x = "85" y = "0" xlink:href = "#eye"/>
+
+		/* Loftys mouth */
+		<g id="loftymouth" transform="rotate(-4 330,275)">
+			<rect x="330" y="260" width="130" height="30"/>
+			<ellipse cx="330" cy="275" rx="15" ry="15"/>
+			<ellipse cx="460" cy="275" rx="15" ry="15"/>
+			<line id="loftylips" x1="330" y1="275" x2="460" y2="275"/>
+		</g>
+ 
+		/*tires*/
+		<g id="loftytires">
+			/*back tire*/
+			<ellipse cx="100" cy="300" rx="40" ry="50"/>
+
+			/*middle tire*/
+			<ellipse cx="180" cy="310" rx="40" ry="50"/>
+
+			/*front tire*/
+			<ellipse cx="270" cy="325" rx="40" ry="55"/>
+		</g>
+
+		/* hub caps */
+		<g id="loftyhubcaps">
+			<ellipse cx="100" cy="300" rx="15" ry="20"/>
+			<ellipse cx="180" cy="310" rx="15" ry="20"/>
+			<ellipse cx="270" cy="325" rx="15" ry="25"/>
+		</g>
+
+	</g>
+</defs>
+
+/************************ DRAWING ************************/
+
+/* scene 1 */
+/* pull in the defined background */
+<use x="0" y="0" xlink:href="#scene1bgdefs"/>
+
+/* draw the bird */
+<use id="birdy" x="-100" y="0" xlink:href = "#bird"/>
+
+/* draw bob in */
+<use id="bob" x="740" y="500" transform="scale(0.42,0.42);"  xlink:href="#bobdefs" opacity="0"/>
+
+/*****************************/
+/*assets for scene 2 - the handshake */
+/* pull in the defined background */
+<use id="scene2bg" x="0" y="0" xlink:href="#scene2bgdefs" opacity="0"/>
+
+/* Bob and his Evil Twin */
+<use id="officebob" x="-250" y="200" xlink:href="#bobdefs"/>
+<use id="officetwin" x="800" y="200" xlink:href="#bobdefs" transform="scale(-1,1);"/>
+
+/*****************************/
+/*assets for scene 3 - the build off */
+/* pull in the defined background */
+<use id="scene3bg" x="0" y="0" xlink:href="#scene3bgdefs" opacity="0"/>
+
+/* both huts and the noise lines */
+<use id="bobshut" x="-600" y="0" xlink:href="#workhut"/>
+<use id="bobshutnoise" x="-150" y="0" xlink:href="#noise" opacity="0"/>
+
+<use id="twinshut" x="520" y="0" xlink:href="#workhut"/>
+<use id="twinshutnoise" x="180" y="0" xlink:href="#noise" opacity="0"/>
+
+/* Men At Work sign */
+<use id="sign" x="278" y="600" xlink:href="#signdefs"/>
+
+/* used to simulate nights and days passing */
+<rect id="nightfilter" x="0" y="0" width="800" height="500" opacity="0"/>
+
+/* STOP! hand to signal end of building time */
+<use id="handstop" x="140" y="270" xlink:href="#handdefs" opacity="0"/>
+
+/*****************************/
+/*assets for scene 4 - the result */
+/* pull in the defined background */
+<use id="scene4bg" x="0" y="0" xlink:href="#scene4bgdefs" opacity="0"/>
+
+/* both of the slides */
+<use id="bobslide" x="470" y="500" transform="scale(0.5)" xlink:href="#slidedefs" opacity="0"/>
+<use id="twinslide" x="460" y="100" xlink:href="#slidedefs" opacity="0"/> 
+
+/*****************************/
+/*assets for scene 5 - the end */
+/* pull in the defined background */
+<use id="scene5bg" x="0" y="0" xlink:href="#scene5bgdefs" opacity="0"/>
+
+/* add just bob's slightly tilted head for moral of the story */
+<use id="bobshead" x="-40" y="76" transform="scale(2.5) rotate(-15,150,150)" xlink:href="#bobheaddefs" opacity="0"/>
+
+
+/************************ DIALOGUE ************************/
+/* SCENE 1 */
+<text class="scene1text" id="text1" x="125" y="250" opacity="0"> 
+	What's wrong Bob?
+</text>
+
+<text class="scene1text" id="text2" x="200" y="450" opacity="0"> 
+	It's my Evil Twin!
+</text>
+
+<text class="scene1text" id="text3" x="200" y="450" opacity="0"> 
+	This town isn't big enough for the both of us!
+</text>
+
+<text class="scene1text" id="text4" x="125" y="250" opacity="0"> 
+	I know! You should have a build off!
+</text>
+
+<text class="scene1text" id="text5" x="200" y="450" opacity="0"> 
+	Yeah! The loser has to leave for good!
+</text>
+
+<text class="scene1text" id="text6" x="125" y="250" opacity="0"> 
+	Both build a slide for the children's home!
+</text>
+
+<text class="scene1text" id="text7" x="200" y="450" opacity="0"> 
+	That's a great idea!
+</text>
+
+/* SCENE 2 */
+<text class="scene2text" id="text8" x="10" y="300" opacity="0"> 
+	...and the loser leaves!
+</text>
+
+<text class="scene2text" id="text9" x="520" y="300" opacity="0"> 
+	Deal! Let's shake on it!
+</text>
+
+/* SCENE 4 */
+<text class="scene4text" id="text10" x="135" y="256" opacity="0"> 
+	Bob's Slide
+</text>
+
+<text class="scene4text" id="text11" x="340" y="256" opacity="0"> 
+	Evil Twin's Slide
+</text>
+
+<text class="scene4text" id="text12" x="100" y="50" opacity="0"> 
+	And the winner is...
+</text>
+
+<text class="scene4text" id="text13" x="100" y="50" opacity="0"> 
+	The EVIL TWIN!
+</text>
+
+<text class="scene4text" id="text14" x="100" y="50" opacity="0"> 
+	Oh no, it's all over for Bob...
+</text>
+
+<text class="scene4text" id="text15" x="100" y="50" opacity="0">
+	BUT WAIT...
+</text>
+
+<text class="scene4text" id="text16" x="100" y="50" opacity="0">
+	The Twin's slide collapsed! It was unsafe!!
+</text>
+
+<text class="scene4text" id="text17" x="100" y="50" opacity="0">
+	BOB WINS BY DEFAULT!
+</text>
+
+<text class="scene5text" id="text18" x="50" y="150" opacity="0">
+	REMEMBER KIDS:
+</text>
+
+<text class="scene5text" id="text19" x="250" y="250" opacity="0">
+	A hollow victory is
+</text>
+
+<text class="scene5text" id="text20" x="250" y="300" opacity="0">
+	a victory all the same!
+</text>
+
+/************************ ANIMATION ************************/
+<g id="scene1">
+	/* fade in from black */
+	<rect x="0" y="0" width="800" height="500">
+		<animate attributeType="CSS" attributeName="opacity" 
+			from="1" to="0" dur="5s" repeatCount="1" fill="freeze" />
+	</rect>
+	
+	/* Bob appears */
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#bob" begin="10s"
+			dur="1s" from="0" to="1" fill="freeze"/>	
+
+	/* bird flying */
+	<animate attributeName="x" attributeType="XML" xlink:href="#birdy" begin="10s"
+			dur="15s" from="-50" to="1050" repeatCount="indefinite"/> /*made end point longer to achieve delay*/
+
+	/* lights being turned off as Bob comes out */
+	<animate attributeType="CSS" xlink:href="#window3" attributeName="fill" from="yellow" to="lightblue" begin="4s" dur="1s" fill="freeze"/>	
+	<animate attributeType="CSS" xlink:href="#window2" attributeName="fill" from="yellow" to="lightblue" begin="6s" dur="1s"  fill="freeze"/>	
+	<animate attributeType="CSS" xlink:href="#frontdoor" attributeName="fill" from="OliveDrab" to="black" begin="8s" dur="1s"  fill="freeze"/>	
+	<animate attributeType="CSS" xlink:href="#frontdoor" attributeName="fill" from="black" to="OliveDrab" begin="12s" dur="1s"  fill="freeze"/>				
+
+
+	/* Bob walks out */			
+	<animate attributeName="x" attributeType="XML" xlink:href="#bob" begin="12s"
+			dur="2s" from="740" to="820" fill="freeze"/>
+
+	<animate attributeName="y" attributeType="XML" xlink:href="#bob" begin="12s"
+			dur="2s" from="500" to="630" fill="freeze"/>				
+	
+
+	/* bob walks */		
+	<animateTransform
+            attributeType="XML"
+			xlink:href="#leg"
+            attributeName="transform"
+            type="rotate"
+            from="5 100,170" to="0 100,170"
+            begin="12s" dur="1s"
+			repeatCount="3"/>			
+
+	<animateTransform
+            attributeType="XML"
+			xlink:href="#lowerleg"
+            attributeName="transform"
+            type="rotate"
+            from="10 100,170" to="20 100,170"
+            begin="12s" dur="1s"
+			repeatCount="3"/>
+
+	<animateTransform
+            attributeType="XML"
+			xlink:href="#leftarm"
+            attributeName="transform"
+            type="rotate"
+            from="10 30,95" to="20 30,95"
+            begin="12s" dur="1s"
+			repeatCount="3"/>	
+	 
+	<animateTransform
+            attributeType="XML"
+			xlink:href="#rightarm"
+            attributeName="transform"
+            type="rotate"
+            from="10 20,125" to="20 20,125"
+            begin="12s" dur="1s"
+			repeatCount="3"/>
+	
+	/* lofty drives over */
+	<animate attributeName="x" attributeType="XML" xlink:href="#lofty" begin="14s"
+			dur="2s" from="50" to="160" fill="freeze"/>					
+
+	/* lofty motioning to ask whats wrong */			
+	<animate attributeName="x" attributeType="XML" xlink:href="#lofty" begin="17s"
+			dur="1s" from="160" to="180" repeatCount="3"/>
+	<animate attributeName="y" attributeType="XML" xlink:href="#lofty" begin="17s"
+			dur="1s" from="430" to="440" repeatCount="3"/>
+			
+			
+
+	/* Dialogue appears and disappears in sequence */
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text1" begin="16s"
+			dur="1s" from="0" to="1" fill="freeze"/>
+			
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text1" begin="19s"
+			dur="1s" from="1" to="0" fill="freeze"/>
+	
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text2" begin="20s"
+			dur="1s" from="0" to="1" fill="freeze"/>
+			
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text2" begin="23s"
+			dur="1s" from="1" to="0" fill="freeze"/>
+			
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text3" begin="24s"
+			dur="1s" from="0" to="1" fill="freeze"/>
+			
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text3" begin="27s"
+			dur="1s" from="1" to="0" fill="freeze"/>
+
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text4" begin="28s"
+			dur="1s" from="0" to="1" fill="freeze"/>
+			
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text4" begin="31s"
+			dur="1s" from="1" to="0" fill="freeze"/>
+
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text5" begin="32s"
+			dur="1s" from="0" to="1" fill="freeze"/>
+			
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text5" begin="35s"
+			dur="1s" from="1" to="0" fill="freeze"/>
+			
+
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text6" begin="36s"
+			dur="1s" from="0" to="1" fill="freeze"/>
+			
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text6" begin="39s"
+			dur="1s" from="1" to="0" fill="freeze"/>
+			
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text7" begin="40s"
+			dur="1s" from="0" to="1" fill="freeze"/>
+			
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text7" begin="42s"
+			dur="1s" from="1" to="0" fill="freeze"/>
+
+</g>			
+/* Scene 2 - in the office */
+<g id="scene2">
+	/* fade in background */
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#scene2bg" begin="42s"
+			dur="1s" from="0" to="1" fill="freeze"/>
+
+	/* both walk in */
+	<animate attributeName="x" attributeType="XML" xlink:href="#officebob" begin="42s"
+			dur="6s" from="-250" to="200" fill="freeze"/>	
+
+	<animate attributeName="x" attributeType="XML" xlink:href="#officetwin" begin="42s"
+			dur="6s" from="-800" to="-550" fill="freeze"/>			
+			
+	/* dialogue */
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text8" begin="49s"
+			dur="3s" from="0" to="1" fill="freeze"/>
+
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text8" begin="53s"
+			dur="3s" from="1" to="0" fill="freeze"/>
+			
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text9" begin="53s"
+			dur="3s" from="0" to="1" fill="freeze"/>
+
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text9" begin="57s"
+			dur="3s" from="1" to="0" fill="freeze"/>			
+				
+			
+	/* the handshake animation */			
+	<animateTransform
+            attributeType="XML"
+			xlink:href="#leftarm"
+            attributeName="transform"
+            type="rotate"
+            from="0 95,95" to="-50 95,95"
+            begin="56s" dur="4s"
+			fill="freeze"/>	
+	
+	/* hand shaking */
+	<animate attributeName="y" attributeType="XML" xlink:href="#leftarm" begin="60s"
+			dur="1s" from="90" to="95" repeatCount="6"/>
+</g>
+
+/* Scene 3 - the build off */
+<g id="scene3">
+	/* fill in background */
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#scene3bg" begin="67s"
+			dur="5s" from="0" to="1" fill="freeze"/>
+
+	/* huts slide in to view */
+	<animate attributeName="x" attributeType="XML" xlink:href="#bobshut" begin="69s"
+			dur="3s" from="-400" to="-150" fill="freeze"/>
+	<animate attributeName="x" attributeType="XML" xlink:href="#twinshut" begin="69s"
+			dur="3s" from="420" to="170" fill="freeze"/>
+
+
+	/ * sign slides up */
+	<animate attributeName="y" attributeType="XML" xlink:href="#sign" begin="69s"
+			dur="2s" from="600" to="400" fill="freeze"/>
+	
+	/* MEN AT WORK sign spins round */	 
+	  <animateTransform
+            attributeType="XML"
+			xlink:href="#signface"
+            attributeName="transform"
+            type="rotate"
+            from="0,80,20" to="360,80,20"
+            begin="71s" dur="3s"
+            repeatCount="indefinite"/>
+	
+	/* simulate day passing and night passing during build off*/
+	<animate attributeType="XML" xlink:href="#nightfilter" attributeName="opacity" 
+         from="0" to="0.75"  begin="73s" dur="9s" fill="freeze"/>
+		 
+	<animate attributeType="XML" xlink:href="#nightfilter" attributeName="opacity" 
+         from="0.75" to="0" begin="88s" dur="9s" fill="freeze"/>	
+
+	/* make it look like vigorous building happening inside huts */
+	<animateTransform
+        attributeType="XML"
+		xlink:href="#bobshut"
+        attributeName="transform"
+        type="skewX"
+        from="-5" to="5"
+        begin="76s" dur="1s"
+        repeatCount="5"/>
+		
+	<animateTransform
+        attributeType="XML"
+		xlink:href="#twinshut"
+        attributeName="transform"
+        type="skewX"
+        from="-5" to="5"
+        begin="84s" dur="1s"
+        repeatCount="5"/>
+	
+	/* work noise animation*/	
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#bobshutnoise" begin="76s"
+		dur="1s" from="0" to="1" repeatCount="5"/>
+			
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#twinshutnoise" begin="84s"
+		dur="1s" from="0" to="1" repeatCount="5"/>	
+				 
+	/* sun moon flying over to simulate night and day */
+	<animateTransform
+        attributeType="XML"
+		xlink:href="#sunmoon"
+        attributeName="transform"
+        type="rotate"
+        from="0,400,500" to="180,400,500"
+        begin="70s" dur="12s"
+        repeatCount="2"/>
+		
+	/* sun changes to be a moon for during the night */
+	<animateColor attributeType="CSS" xlink:href="#sunmoon" attributeName="fill"
+		from="yellow" to="white"
+		begin = "81s" dur="1s"
+		fill="freeze" />
+
+	/* slide Sign away */
+	<animate attributeName="y" attributeType="XML" xlink:href="#sign" begin="94s"
+		dur="2s" from="400" to="600" fill="freeze"/>	
+			
+	/* hand signals STOP! */
+	<animate attributeType="XML" xlink:href="#handstop" attributeName="opacity" 
+         from="0" to="1"  begin="96s" dur="1s" fill="freeze"/>
+		 
+	<animateTransform
+        attributeType="XML"
+		xlink:href="#handstop"
+        attributeName="transform"
+        type="scale"
+        from="0" to="1.2"
+        begin="96s" dur="5s"
+        fill="freeze"/>
+	
+</g>
+
+/* Scene 4 - the results */
+<g id="scene4">
+	/* fill in background */
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#scene4bg" begin="102s"
+		dur="5s" from="0" to="1" fill="freeze"/>
+	
+	/* hide lofty who was part of Scene 1's bg that has been used here */
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#lofty" begin="101s"
+		dur="1s" from="1" to="0" fill="freeze"/>
+			
+	/* make the slides appear */
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#bobslide" begin="102s"
+		dur="5s" from="0" to="1" fill="freeze"/>
+
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#twinslide" begin="102s"
+		dur="5s" from="0" to="1" fill="freeze"/>	
+	
+	
+	/* put the names of the slide labels in */
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text10" begin="103s"
+		dur="3s" from="0" to="1" fill="freeze"/>
+			
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text11" begin="103s"
+		dur="3s" from="0" to="1" fill="freeze"/>
+	
+	
+	/* add the dialogue*/
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text12" begin="107s"
+			dur="1s" from="0" to="1" fill="freeze"/>
+			
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text12" begin="110s"
+			dur="1s" from="1" to="0" fill="freeze"/>
+	
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text13" begin="111s"
+			dur="1s" from="0" to="1" fill="freeze"/>
+			
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text13" begin="114s"
+			dur="1s" from="1" to="0" fill="freeze"/>
+	
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text14" begin="115s"
+			dur="1s" from="0" to="1" fill="freeze"/>
+			
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text14" begin="118s"
+			dur="1s" from="1" to="0" fill="freeze"/>
+	
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text15" begin="119s"
+			dur="1s" from="0" to="1" fill="freeze"/>
+			
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text15" begin="121s"
+			dur="1s" from="1" to="0" fill="freeze"/>
+	
+	/* the twin's slide falls over*/
+	<animateTransform
+        attributeType="XML"
+		xlink:href="#twinslide"
+        attributeName="transform"
+        type="rotate"
+        from="0 300,700" to="40 300,700"
+        begin="123s" dur="3s"
+        fill="freeze"/>
+	
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text11" begin="123s"
+			dur="3s" from="1" to="0" fill="freeze"/>
+	
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text16" begin="128s"
+			dur="1s" from="0" to="1" fill="freeze"/>
+			
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text16" begin="131s"
+			dur="1s" from="1" to="0" fill="freeze"/>
+			
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text17" begin="132s"
+			dur="1s" from="0" to="1" fill="freeze"/>
+			
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text17" begin="135s"
+			dur="1s" from="1" to="0" fill="freeze"/>
+</g>
+
+/* Scene 5 */
+<g id="scene5">
+	/* fill in background */
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#scene5bg" begin="137s"
+			dur="5s" from="0" to="1" fill="freeze"/>
+	
+	/* show Bob's head*/
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#bobshead" begin="137s"
+			dur="5s" from="0" to="1" fill="freeze"/>
+
+	/* show moral of the story text */
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text18" begin="137s"
+			dur="1s" from="0" to="1" fill="freeze"/>		
+
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text19" begin="137s"
+			dur="1s" from="0" to="1" fill="freeze"/>				
+	
+	<animate attributeName="opacity" attributeType="XML" xlink:href="#text20" begin="137s"
+			dur="1s" from="0" to="1" fill="freeze"/>	
+			
+</g>
+
+</svg>
+
